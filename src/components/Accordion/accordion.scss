@@ -1,0 +1,15 @@
+.accordion-wrapper{
+&::-webkit-scrollbar {
+   width: 8px;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    @apply bg-[#WD8E7EB];
+  }
+   
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    @apply bg-[#82C29B] rounded-xl; 
+  }
+}

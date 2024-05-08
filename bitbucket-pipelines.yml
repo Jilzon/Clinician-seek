@@ -1,0 +1,31 @@
+# Using the node image provided by bitbucket
+image: node:18.17.0
+
+pipelines:
+  branches:
+    staging:
+      - step:
+          name: Build and deploy
+          deployment: Production
+          caches:
+            - node
+          script:
+            # Install dependencies
+            #- npm install
+            # Build the Next.js app
+            #- npm run build
+            # List contents of the current directory for debugging
+            # Set up SSH
+            - echo "$SSH_KEY" > ~/.ssh/id_rsa
+            - chmod 600 ~/.ssh/id_rsa
+            - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+            # Deploy the app to the droplet
+            # Create a compressed archive excluding node_modules
+            #- tar czvf archive.tar.gz ./* ./build*
+            - tar czvf archive.tar.gz --exclude=node_modules ./* ./*
+            - ssh $SSH_USER@$SSH_HOST "cd $REMOTE_DIR_SG_FE && find . -mindepth 1 -maxdepth 1 ! -name '.env' -exec rm -rf {} +"
+
+            # Copy the archive to the remote server using scp
+            - scp archive.tar.gz $SSH_USER@$SSH_HOST:$REMOTE_DIR_SG_FE/
+
+            - ssh $SSH_USER@$SSH_HOST "cd $REMOTE_DIR_SG_FE && tar xzvf archive.tar.gz && rm archive.tar.gz && npm install && npm run build && pm2 restart $PM2_APP_NAME_SG_FE --update-env"

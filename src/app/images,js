@@ -1,0 +1,21 @@
+const clinicImages = [
+    {
+      src: '/image1.jpg',
+      alt: 'Image 1',
+      title: 'Image 1 Title'
+    },
+    {
+      src: '/image2.jpg',
+      alt: 'Image 2',
+      title: 'Image 2 Title'
+    },
+    {
+      src: '/image3.jpg',
+      alt: 'Image 3',
+      title: 'Image 3 Title'
+    },
+    // Add more images as needed
+  ];
+  
+  export default clinicImages;
+  

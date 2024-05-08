@@ -1,0 +1,11 @@
+.card ul li::before{
+  content: "\2022";
+  
+  @apply text-[#018893] align-middle inline-flex mr-2 w-2 h-2 absolute -left-2 text-[160%];
+}
+.card{
+  ul li{
+    position: relative;
+    padding-left: 16px;
+  }
+} 

@@ -1,0 +1,41 @@
+:root {
+  --clr-btn: #82C29B;
+  --clr-title: #018893;
+}
+
+.btn {
+  @apply py-3 px-6 bg-btn text-white rounded-btn min-h-btn;
+}
+
+.logo-list figure {
+  align-self: flex-end;
+}
+
+.logo-list figure:nth-child(3) {
+  align-self: baseline;
+}
+
+.logo-list figure:nth-child(4) {
+  align-self: baseline;
+}
+
+.partners .heading-secondary {
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+
+.partners p {
+  font-size: 16px;
+  color: #828282;
+  line-height: 1.25rem;
+  max-width: 352px;
+}
+
+.partners figure {
+  padding-top: 75px;
+  display: flex;
+}
+
+.partners .text-container {
+  margin-bottom: 87px;
+}

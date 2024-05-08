@@ -1,0 +1,17 @@
+.auto-complete{
+    .auto-complete-list{
+    &::-webkit-scrollbar {
+       width: 8px !important;
+      }
+      
+      /* Track */
+      &::-webkit-scrollbar-track {
+        @apply bg-[#WD8E7EB];
+      }
+       
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        @apply bg-[#D8E7EB] rounded-xl; 
+      }
+    }
+    }

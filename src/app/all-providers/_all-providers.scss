@@ -1,0 +1,15 @@
+.all-providers{
+    .card,.inner-card{
+        @apply min-h-0;
+    
+}
+.page-item.active .page-link{
+    @apply bg-clr-btn border-none;
+}
+.card{
+    @apply min-h-60 cursor-pointer max-w-[350px] min-w-0;
+    button{
+        @apply hidden;
+    }
+}
+}

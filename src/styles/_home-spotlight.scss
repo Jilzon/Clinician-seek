@@ -1,0 +1,7 @@
+section.spotlight {
+  &::after {
+    content: '';
+    @apply absolute left-0 right-0 top-5 md:top-0 h-72 lg:hidden;
+    background-image: linear-gradient(#E0FEE1, transparent);
+  }
+}

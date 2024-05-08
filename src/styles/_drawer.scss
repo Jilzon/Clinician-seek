@@ -1,0 +1,24 @@
+.mobile-nav{
+    @apply w-[80%] h-[100%] fixed top-0 right-0 transition-all duration-500 overflow-x-hidden z-[999] translate-x-full;
+  }
+  .active{
+    @apply translate-x-0;
+  }
+  div.active-full-width{
+@apply w-full translate-x-0;
+  }
+  div.full-width{
+    @apply w-full;
+  }
+  .header-drawer{
+    @apply max-w-[360px] max-h-fit rounded-tl-[22px] rounded-bl-[22px] bg-white mx-auto;
+  }
+  .mobile-filter-drawer>div{
+    top: 10%;
+    @apply rounded-br-[22px] rounded-bl-[22px];
+  }
+  .mobile-nav ul li{
+    @apply text-clr_nav p-0 font-medium leading-[5.025rem] text-[28px];
+  }
+
+  

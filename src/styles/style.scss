@@ -1,0 +1,34 @@
+:root {
+  --clr-btn: #82C29B;
+  --clr-title: #018893;
+}
+@import 'home-spotlight';
+.btn {
+  @apply py-3 px-6 bg-clr-btn text-white rounded-btn min-h-btn hover:bg-clr-title whitespace-nowrap transition;
+}
+.card,.image-with-text,.popup-wrapper{
+button{
+  @apply hover:bg-clr-title transition;
+}
+}
+#SubmitBtn{
+  background-color: rgb(130 194 155) !important;
+}
+#SubmitBtn:hover{
+  background-color: rgb(1 136 147) !important;
+}
+.clinician-slider-wrapper .slick-list .slick-slide{
+  padding: 10px !important;
+}
+/* .logo-list figure {
+  align-self: flex-end;
+}
+
+.logo-list figure:nth-child(3) {
+  align-self: baseline;
+}
+
+.logo-list figure:nth-child(4) {
+  align-self: baseline;
+} */
+
